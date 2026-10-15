@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import type { Story } from '../content/types'
 import { ChannelNote } from './ChannelNote'
 import { RoadLine } from './RoadLine'
@@ -12,18 +11,11 @@ interface StoryArticleProps {
   dateLabel?: string
 }
 
-/**
- * A ilustração entra depois do segundo parágrafo: assim a leitura começa já
- * na primeira tela, e a imagem funciona como uma pausa.
- */
-const IMAGE_AFTER_PARAGRAPH = 2
-
 export function StoryArticle({ story, eyebrow, dateLabel }: StoryArticleProps) {
   const headingId = `titulo-${story.id}`
-  const imagePosition = Math.min(IMAGE_AFTER_PARAGRAPH, story.paragraphs.length) - 1
 
   return (
-    <article className="story" aria-labelledby={headingId}>
+    <article className={story.imageUrl ? 'story story--with-image' : 'story'} aria-labelledby={headingId}>
       <header className="story__header">
         <p className="eyebrow">
           <span>{eyebrow}</span>
@@ -44,18 +36,26 @@ export function StoryArticle({ story, eyebrow, dateLabel }: StoryArticleProps) {
         </p>
       </header>
 
+      {/* Ilustração horizontal (3:2) logo abaixo do título: título, imagem e
+          começo do texto cabem juntos na primeira tela do celular. */}
+      {story.imageUrl && (
+        <figure className="story__figure">
+          <img
+            src={story.imageUrl}
+            alt={story.imageAlt ?? ''}
+            width="1200"
+            height="800"
+            decoding="async"
+            fetchPriority="high"
+          />
+        </figure>
+      )}
+
       <RoadLine />
 
       <div className="story__body">
         {story.paragraphs.map((paragraph, index) => (
-          <Fragment key={index}>
-            <p>{paragraph}</p>
-            {index === imagePosition && story.imageUrl && (
-              <figure className="story__figure">
-                <img src={story.imageUrl} alt={story.imageAlt ?? ''} decoding="async" />
-              </figure>
-            )}
-          </Fragment>
+          <p key={index}>{paragraph}</p>
         ))}
       </div>
 

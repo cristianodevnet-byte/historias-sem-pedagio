@@ -5,7 +5,7 @@
  *    da história no começo do nome: "01.png", "1.jpg", "01-qualquer-coisa.webp"...
  * 2. Rode: npm run imagens:otimizar
  *
- * Cada imagem é recortada em formato vertical 4:5, reduzida para 900 px de
+ * Cada imagem é recortada em formato horizontal 3:2, reduzida para 1200 px de
  * largura e salva em WebP (geralmente menos de 150 KB) em
  * src/content/images/<id-da-historia>.webp. As originais não são alteradas.
  */
@@ -17,8 +17,8 @@ const ROOT = resolve(import.meta.dirname, '..')
 const INPUT_DIR = join(ROOT, 'imagens-originais')
 const STORIES_DIR = join(ROOT, 'src/content/stories')
 const OUTPUT_DIR = join(ROOT, 'src/content/images')
-const WIDTH = 900
-const HEIGHT = 1125 // 4:5
+const WIDTH = 1200
+const HEIGHT = 800 // 3:2
 
 if (!existsSync(INPUT_DIR)) {
   mkdirSync(INPUT_DIR)

@@ -48,7 +48,8 @@ Abra o endereço que aparecer no terminal (normalmente `http://localhost:5173`).
 | `npm run historias:relatorio` | Lista as histórias do rodízio e quais já têm imagem |
 | `npm run historias:importar -- arquivo.json` | Importa várias histórias de uma vez |
 | `npm run historias:indice` | Atualiza o `INDICE_EDITORIAL.md` (títulos, verdades, referências, notas) |
-| `npm run imagens:otimizar` | Prepara as ilustrações de `imagens-originais/` para o site |
+| `npm run imagens:gerar` | Gera as ilustrações que faltam com a API da OpenAI |
+| `npm run imagens:otimizar` | Prepara ilustrações feitas em outra ferramenta (`imagens-originais/`) |
 
 > O `build` roda os testes antes de gerar o site. Se alguma história tiver erro (número repetido ou faltando, imagem sem descrição, etc.), o build falha e **nada quebrado é publicado**.
 
@@ -170,20 +171,29 @@ npm run historias:importar -- caminho/historias.json
 
 ## Ilustrações
 
-O site mostra uma ilustração por história, entre o segundo e o terceiro parágrafo. Assim a leitura começa na primeira tela e a imagem funciona como uma pausa. Histórias sem imagem aparecem só com o texto.
+O site mostra uma ilustração horizontal (3:2) por história, logo abaixo do título. No celular, título, imagem e começo do texto cabem juntos na primeira tela. Histórias sem imagem aparecem só com o texto.
 
-1. Gere a imagem numa ferramenta como ChatGPT, Gemini ou Midjourney, usando o `illustrationPrompt` do arquivo da história. Prefira o formato **vertical 4:5**.
-2. Salve na pasta **`imagens-originais/`**, na raiz do projeto, com o **número da história** no começo do nome: `01.png`, `02.jpg`, `03-gaveta.webp`...
+### Geração automática (OpenAI)
+
+As imagens são geradas a partir do `illustrationPrompt` de cada história, já com o nome certo, sem nenhum passo manual.
+
+1. Crie uma chave em [platform.openai.com](https://platform.openai.com) (mesmo login do ChatGPT; a API é cobrada à parte, com créditos pré-pagos).
+2. Cole a chave no arquivo `.env.local`, na raiz do projeto: `OPENAI_API_KEY=sk-...`. Esse arquivo **não vai para o GitHub**.
 3. Rode:
 
    ```bash
-   npm run imagens:otimizar
+   npm run imagens:gerar
    ```
 
-   O script recorta em 4:5, reduz para 900 px de largura e converte para WebP (normalmente menos de 150 KB), salvando em `src/content/images/<id>.webp`.
-4. Confira se a história tem `imageAlt` e publique.
+   - Sem números, gera só as histórias que **ainda não têm imagem**.
+   - `npm run imagens:gerar -- 7` refaz a imagem da história 7 (aceita vários números).
+   - `--qualidade high` gera com mais qualidade (mais caro); o padrão é `medium`.
 
-A pasta `imagens-originais/` não vai para o GitHub, porque as imagens em alta resolução deixariam o repositório pesado. Ela continua salva no seu computador e no OneDrive.
+O original fica em `imagens-originais/NN-id.png` (fora do GitHub) e a versão do site, recortada em 3:2 com 1200 px de largura em WebP, em `src/content/images/<id>.webp`. Confira as imagens antes de publicar: às vezes o gerador coloca letras ou placas mesmo com o pedido para não colocar. Nesse caso, refaça a imagem daquela história.
+
+### Imagens feitas em outra ferramenta
+
+Salve em `imagens-originais/` com o número da história no começo do nome (`01.png`, `02-gaveta.jpg`...) e rode `npm run imagens:otimizar`.
 
 ---
 

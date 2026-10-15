@@ -1,20 +1,19 @@
 /* ==========================================================================
    Histórias Sem Pedágio: identidade visual
-   Claro: papel quente, para leitura sob sol forte.
-   Escuro: estrada à noite, âmbar de farol. Segue a preferência do aparelho.
+   Sempre escuro: estrada à noite, âmbar de farol, como o canal Sem Pedágio.
    ========================================================================== */
 
 :root {
-  --paper: #f3eee4;
-  --paper-raised: #e9e2d5;
-  --ink: #1e1a15;
-  --ink-soft: #3f382f;
-  --muted: #675e52;
-  --line: #d5cbbb;
-  --accent: #9a4711;
-  --accent-soft: #c98b52;
-  --button-bg: #1e1a15;
-  --button-ink: #f8f3ea;
+  --paper: #111214;
+  --paper-raised: #1b1d20;
+  --ink: #ece5d8;
+  --ink-soft: #d3cbbd;
+  --muted: #a0978a;
+  --line: #2e3135;
+  --accent: #e6a54e;
+  --accent-soft: #8a6431;
+  --button-bg: #e6a54e;
+  --button-ink: #17110a;
 
   --serif: 'Literata Variable', Georgia, 'Times New Roman', serif;
   --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -23,22 +22,7 @@
   --measure: 36rem;
   --gutter: max(1.25rem, env(safe-area-inset-left), env(safe-area-inset-right));
 
-  color-scheme: light dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #111214;
-    --paper-raised: #1b1d20;
-    --ink: #ece5d8;
-    --ink-soft: #d3cbbd;
-    --muted: #a0978a;
-    --line: #2e3135;
-    --accent: #e6a54e;
-    --accent-soft: #8a6431;
-    --button-bg: #e6a54e;
-    --button-ink: #17110a;
-  }
+  color-scheme: dark;
 }
 
 /* ---------- Base ---------- */
@@ -258,22 +242,27 @@ a:hover {
   color: var(--muted);
 }
 
-/* Ilustração: recorte vertical 4:5, no meio do texto, de borda a borda no celular. */
-.story__figure {
-  margin: 2.25rem calc(-1 * var(--gutter));
+/* Ilustração horizontal 3:2 logo abaixo do título, de borda a borda no celular. */
+.story--with-image {
+  padding-top: clamp(1.75rem, 5vh, 3.5rem);
 }
 
-.story__figure + p {
-  margin-top: 0;
+.story__figure {
+  margin: 1.5rem calc(-1 * var(--gutter)) 0;
 }
 
 .story__figure img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  max-height: 62vh;
+  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   background: var(--paper-raised);
+}
+
+/* Com imagem, a faixa de estrada fica mais curta para o texto começar mais cedo. */
+.story--with-image > .road-line {
+  margin-block: 1.5rem;
 }
 
 @media (min-width: 40rem) {
@@ -487,7 +476,7 @@ a:hover {
 }
 
 /* Logo do canal sobre uma "placa" escura, como o banner do YouTube:
-   o "SEM" branco do logo precisa de fundo escuro nos dois temas. */
+   destaca o logo do fundo da página. */
 .channel-badge {
   display: grid;
   justify-items: center;
