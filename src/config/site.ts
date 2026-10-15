@@ -17,12 +17,12 @@ export const siteConfig = {
   rotationStart: '2026-10-14',
 
   /**
-   * Endereço público do site (Cloudflare Workers).
-   * PROVISÓRIO: só passe `siteUrlConfirmed` para `true` depois que o projeto
-   * estiver publicado e o endereço abrir de verdade.
+   * Endereço público do site (Cloudflare Workers). É o endereço do QR Code:
+   * não mude o nome do projeto nem o subdomínio "sempedagio" da conta, ou o
+   * QR Code impresso deixa de funcionar.
    */
-  siteUrl: 'https://historias-sem-pedagio.workers.dev',
-  siteUrlConfirmed: false,
+  siteUrl: 'https://historias-sem-pedagio.sempedagio.workers.dev',
+  siteUrlConfirmed: true,
 
   channel: {
     name: 'Sem Pedágio',

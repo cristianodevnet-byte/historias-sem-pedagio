@@ -220,8 +220,8 @@ O botão usa o compartilhamento nativo do celular e, quando ele não existe, cop
 Tudo fica em [`src/config/site.ts`](src/config/site.ts):
 
 ```ts
-siteUrl: 'https://historias-sem-pedagio.SEU-SUBDOMINIO.workers.dev',
-siteUrlConfirmed: false,          // mude para true depois de publicar
+siteUrl: 'https://historias-sem-pedagio.sempedagio.workers.dev',
+siteUrlConfirmed: true,           // endereço publicado e testado
 channel: {
   name: 'Sem Pedágio',
   url: null,                      // ← coloque aqui o link do canal
@@ -270,9 +270,8 @@ O plano gratuito é suficiente: arquivos estáticos não têm cobrança nem limi
 
 ### 3. Depois da primeira publicação
 
-1. Abra o endereço que a Cloudflare mostrar (algo como `https://historias-sem-pedagio.SEU-SUBDOMINIO.workers.dev`) e confira se tudo funciona.
-2. Em `src/config/site.ts`, confirme `siteUrl` e passe `siteUrlConfirmed` para `true`.
-3. No `index.html`, descomente as linhas de `canonical` e `og:url` com o endereço real.
+1. Abra o endereço publicado, `https://historias-sem-pedagio.sempedagio.workers.dev`, e confira se tudo funciona. Ele é formado pelo nome do projeto (`historias-sem-pedagio`) e pelo subdomínio da conta (`sempedagio`): **não mude nenhum dos dois** depois de imprimir o QR Code.
+2. O endereço já está registrado em `src/config/site.ts` (`siteUrl`) e no `og:url` do `index.html`.
 
 ### Atualizar o site
 

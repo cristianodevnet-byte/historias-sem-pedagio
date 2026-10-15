@@ -5,6 +5,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "historias-sem-pedagio",
   "compatibility_date": "2026-10-01",
+  // Endereço público: https://historias-sem-pedagio.sempedagio.workers.dev (o do QR Code).
+  "workers_dev": true,
+  // Endereços de teste para outros branches; a página principal não é afetada.
+  "preview_urls": true,
   "assets": {
     "directory": "./dist",
     // Qualquer endereço desconhecido abre a página inicial (a história do dia).
