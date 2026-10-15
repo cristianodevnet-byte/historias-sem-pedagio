@@ -1,0 +1,27 @@
+{
+  "id": "a-homenagem",
+  "order": 19,
+  "title": "A homenagem",
+  "paragraphs": [
+    "Na noite em que ia receber a placa de Empresário do Ano da associação comercial, Otávio chegou cedo e ficou no corredor do salão, cumprimentando as pessoas.",
+    "Foi ali que viu Luzia, servindo salgados com o uniforme do bufê.",
+    "Ela tinha sido gerente da primeira loja dele. Em 2015, quando as contas não fecharam, ele a demitiu sem pagar o acerto inteiro, prometendo regularizar depois. Nunca regularizou. Ela nunca cobrou. Ele tinha esquecido. Ou tinha decidido esquecer, o que dá quase no mesmo.",
+    "Luzia o reconheceu, baixou os olhos e seguiu com a bandeja.",
+    "Lá dentro, o mestre de cerimônias testava o microfone. A esposa de Otávio acenava da primeira fila. No telão, uma foto dele sorrindo na inauguração da quarta loja.",
+    "Otávio ficou parado no corredor.",
+    "Depois, em vez de entrar no salão, foi atrás da bandeja até a cozinha.",
+    "No palco, o mestre de cerimônias chamou o nome dele uma vez. Depois outra."
+  ],
+  "imageAlt": "No corredor de um salão de festas, um homem de terno se afasta da porta iluminada do palco e segue em direção à cozinha, atrás de uma mulher com uniforme de bufê.",
+  "meta": {
+    "theme": "Reparação antes do reconhecimento",
+    "truth": "Há honras que não se podem receber de mãos limpas enquanto uma dívida antiga espera no corredor. E esquecer de propósito é um jeito de continuar devendo sem sentir.",
+    "bibleReference": "Mateus 5:23-24",
+    "bibleRelation": "'Se trouxeres a tua oferta ao altar e ali te lembrares de que teu irmão tem alguma coisa contra ti, deixa a tua oferta, vai reconciliar-te primeiro.' Otávio deixa o próprio altar, a homenagem, esperando. A história não mostra se ele repara: só que ele vai.",
+    "emotion": "Surpreendente",
+    "narrativeType": "Ficção original inspirada em ensinamento bíblico",
+    "illustrationPrompt": "Vertical 4:5 editorial cinematic illustration. The back corridor of an event hall in a Brazilian city at night. On one side, a bright doorway opens onto a blurred stage with a large screen and rows of guests. A man in his late fifties in a dark suit walks away from that light, into a dim service corridor leading to a kitchen, following a woman in her fifties in a catering uniform carrying a tray of snacks. Seen from behind, his posture determined but uncertain. Strong contrast between festive light and quiet shadow. Painterly realism, soft film grain, palette of warm gold from the hall and cool grey-blue of the corridor. No text, no readable screen, no religious symbols.",
+    "score": 45,
+    "notes": "Lote 4."
+  }
+}

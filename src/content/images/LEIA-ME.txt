@@ -1,0 +1,6 @@
+Ilustrações das histórias, já otimizadas para o site.
+
+Não coloque arquivos aqui manualmente: use a pasta "imagens-originais" na raiz
+do projeto e rode "npm run imagens:otimizar". Cada imagem recebe o id da
+história como nome (ex.: o-que-a-mao-esquerda-sabia.webp) e aparece sozinha
+no site.

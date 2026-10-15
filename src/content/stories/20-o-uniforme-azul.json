@@ -1,0 +1,29 @@
+{
+  "id": "o-uniforme-azul",
+  "order": 20,
+  "title": "O uniforme azul",
+  "paragraphs": [
+    "Lucas tinha quinze anos e amigos novos, do colégio particular onde tinha ganhado bolsa naquele ano.",
+    "No sábado, foram ao shopping. Na praça de alimentação, um homem de uniforme azul, empurrando um carrinho de limpeza, levantou a mão e sorriu para ele.",
+    "— Quem é? — perguntou um dos amigos.",
+    "— Sei lá — disse Lucas. — Deve estar me confundindo.",
+    "O homem baixou a mão devagar e continuou empurrando o carrinho.",
+    "Lucas passou o resto da tarde rindo alto demais.",
+    "À noite, o pai chegou às dez, como sempre, ainda de uniforme. Esquentou a comida, pôs dois pratos na mesa e chamou o filho. Não disse nada sobre o shopping.",
+    "Lucas sentou. Não conseguia levantar os olhos.",
+    "O pai cortou o bife ao meio, pôs o pedaço maior no prato do filho e empurrou o prato para perto dele.",
+    "— Come, que esfria."
+  ],
+  "imageAlt": "Numa cozinha simples, à noite, um pai de uniforme azul empurra um prato de comida na direção do filho adolescente, que está de cabeça baixa.",
+  "meta": {
+    "theme": "Vergonha, negação e acolhimento",
+    "truth": "Negar quem nos ama costuma nascer do medo de perder um lugar, não da falta de amor. E o perdão mais profundo às vezes não vem em palavras: vem como comida posta na mesa antes de qualquer pedido de desculpas.",
+    "bibleReference": "Mateus 26:69-75; João 21:9-17",
+    "bibleRelation": "Pedro nega conhecer Jesus por medo e depois chora amargamente. Mais tarde, à beira do lago, Jesus prepara peixe e pão e o convida a comer antes de qualquer conversa. O pai de Lucas faz o mesmo gesto, sem cobrar nada.",
+    "emotion": "Comovente",
+    "narrativeType": "Ficção original inspirada em ensinamento bíblico",
+    "illustrationPrompt": "Vertical 4:5 editorial cinematic illustration. A small, simple kitchen in a working-class Brazilian home at night, a single warm pendant lamp over a small table. A man in his forties still wearing a blue cleaning-staff uniform sits at the table, gently pushing a plate of rice, beans and half a steak toward his fifteen-year-old son, who sits across from him with his head lowered, hands in his lap. The father's expression is calm and kind, without reproach. Painterly realism, soft film grain, palette of warm amber light, uniform blue and deep brown shadows. No text, no logos, no religious symbols.",
+    "score": 46,
+    "notes": "Lote 4."
+  }
+}

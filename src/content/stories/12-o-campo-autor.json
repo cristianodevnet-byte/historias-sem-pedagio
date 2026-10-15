@@ -1,0 +1,29 @@
+{
+  "id": "o-campo-autor",
+  "order": 12,
+  "title": "O campo \"Autor\"",
+  "paragraphs": [
+    "Alexandre gostava de dizer que tinha faro para injustiça.",
+    "Na sexta, dando carona para Bianca, a analista mais nova da equipe, ouviu dela a história de uma amiga. A amiga tinha passado três semanas montando um projeto. O chefe pegou o arquivo, trocou a capa e apresentou à diretoria como dele. Foi elogiado. Ela soube pelo corredor.",
+    "Alexandre bateu a mão no volante.",
+    "— Um cara desses não merece a equipe que tem. Tinha que ser exposto.",
+    "— É — disse Bianca. — Foi o que eu pensei.",
+    "Desceu no ponto de ônibus de sempre, agradeceu a carona e não olhou para trás.",
+    "Em casa, Alexandre lembrou da frase dela mais vezes do que gostaria. Perto da meia-noite, abriu o notebook para revisar a apresentação de segunda, a do projeto de logística que a diretoria tinha elogiado tanto.",
+    "Por hábito, clicou em Propriedades do arquivo.",
+    "No campo Autor estava escrito: Bianca Rocha.",
+    "Ficou olhando aquele nome até a tela apagar sozinha."
+  ],
+  "imageAlt": "À noite, numa sala escura, um homem olha para a tela de um notebook que ilumina o rosto dele.",
+  "meta": {
+    "theme": "Indignação moral e cegueira sobre si mesmo",
+    "truth": "Julgamos com clareza o erro que reconhecemos nos outros e não o vemos em nós até que alguém o conte como se fosse de outra pessoa. Às vezes a nossa indignação é a sentença que assinamos contra nós mesmos.",
+    "bibleReference": "2 Samuel 12:1-7",
+    "bibleRelation": "O profeta Natã conta a Davi a história de um rico que tomou a única ovelha de um pobre. Davi se enfurece e condena o homem, e Natã responde: 'Tu és esse homem'. Bianca faz o mesmo sem dizer a última frase: o arquivo diz por ela.",
+    "emotion": "Surpreendente",
+    "narrativeType": "Ficção original inspirada em ensinamento bíblico",
+    "illustrationPrompt": "Vertical 4:5 editorial cinematic illustration. Late night in a dark, tidy living room of a middle-class Brazilian apartment. A man in his forties sits on a sofa with a laptop on his knees, the cold light of the screen illuminating his face from below; his expression is still, caught, unsettled. The screen itself is turned away from the viewer. Everything else falls into deep shadow, with a faint city glow through the window blinds. Close-medium shot. Painterly realism, soft film grain, palette of cold screen blue against warm dark brown. No text, no readable screen, no religious symbols.",
+    "score": 45,
+    "notes": "Lote 3."
+  }
+}

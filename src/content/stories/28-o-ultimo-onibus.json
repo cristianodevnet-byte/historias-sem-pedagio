@@ -1,0 +1,29 @@
+{
+  "id": "o-ultimo-onibus",
+  "order": 28,
+  "title": "O último ônibus",
+  "paragraphs": [
+    "Durante quatro anos de faculdade noturna, Bruno saiu da aula às dez e quarenta e correu até o ponto. O último ônibus passava às dez e quarenta e cinco.",
+    "Quase nunca dava tempo. E quase sempre o ônibus estava lá, parado, com a porta aberta e o motorista olhando o relógio, como se ele também tivesse se atrasado.",
+    "Bruno nunca soube o nome dele. Sabia que era um senhor de bigode, que ouvia rádio AM baixinho e que respondia \"boa noite\" sem tirar os olhos da rua.",
+    "Formou-se em 2014. Virou engenheiro. Sempre que contava a própria história, contava a do ônibus. Sempre pensava em voltar para agradecer. Sempre ficava para depois.",
+    "Dez anos mais tarde, num sábado, foi até a garagem da empresa de ônibus. Descreveu o bigode, a linha, o horário. Um fiscal antigo deu um endereço: seu Waldemar, aposentado, morava a duas ruas dali.",
+    "Seu Waldemar atendeu de bermuda, com o cachorro latindo atrás do portão. Bruno explicou tudo: a faculdade, o horário, os quatro anos, o diploma.",
+    "O velho ouviu com atenção, tentando lembrar. Depois coçou o bigode, meio sem graça.",
+    "— Desculpa, moço. Não lembro de você, não.",
+    "Pensou um pouco.",
+    "— Eu esperava todo mundo."
+  ],
+  "imageAlt": "No portão de uma casa simples, um senhor de bigode e bermuda conversa com um homem mais jovem na calçada, com um cachorro ao lado.",
+  "meta": {
+    "theme": "Gratidão e a bondade que não escolhe",
+    "truth": "Às vezes o bem que mudou nossa vida não foi feito para nós: foi feito para todos, e nós apenas estávamos lá. Isso não diminui a gratidão; só a torna mais humilde, e mostra que a bondade mais firme é a que nem lembra de si.",
+    "bibleReference": "Lucas 17:11-19",
+    "bibleRelation": "Dez leprosos são curados, e só um volta para agradecer. A história se põe no lugar desse um: ele volta e descobre que a cura não era exclusiva. A gratidão continua valendo, e o motorista continua sem precisar dela.",
+    "emotion": "Filosófica, surpreendente",
+    "narrativeType": "Ficção original inspirada em ensinamento bíblico",
+    "illustrationPrompt": "Vertical 4:5 editorial cinematic illustration. Saturday afternoon on a quiet residential street in a Brazilian city. At the low iron gate of a modest house, an old man in his seventies with a thick grey mustache, wearing shorts and a faded T-shirt, leans on the gate with a slightly embarrassed smile; a small mixed-breed dog barks beside him. On the sidewalk, a man in his early thirties in a neat button-down shirt stands facing him, hands half raised mid-explanation. In the far background, a city bus passes at the end of the street. Painterly realism, soft film grain, palette of warm afternoon yellow, faded green and soft concrete grey. No text, no bus company logos, no religious symbols.",
+    "score": 46,
+    "notes": "Lote 6. História sobre um motorista, em diálogo com o projeto."
+  }
+}
