@@ -224,17 +224,15 @@ siteUrl: 'https://historias-sem-pedagio.sempedagio.workers.dev',
 siteUrlConfirmed: true,           // endereço publicado e testado
 channel: {
   name: 'Sem Pedágio',
-  url: null,                      // ← coloque aqui o link do canal
+  url: "https://www.youtube.com/@SemPed%C3%A1gio-h5c",
 },
 ```
 
-Enquanto `channel.url` for `null`, o site menciona o canal só pelo nome, sem link. Para ativar o link:
+O link aparece no fim de cada história e no rodapé, junto com o logo do canal. Se `url` for `null`, o site cita o canal só pelo nome, sem link.
 
-```ts
-url: 'https://www.youtube.com/@SEU-CANAL',
-```
+O logo do rodapé fica em `src/assets/sem-pedagio-logo.webp`, exibido sobre uma placa escura porque o "SEM" do logo é branco. Para trocá-lo, substitua esse arquivo (de preferência com fundo transparente, cerca de 360 px de largura).
 
-A identidade visual atual é tipográfica e provisória. Cores e fontes ficam em [`src/styles/global.css`](src/styles/global.css), e o ícone em `public/favicon.svg`.
+A identidade do site em si é tipográfica. Cores e fontes ficam em [`src/styles/global.css`](src/styles/global.css), e o ícone em `public/favicon.svg`.
 
 ---
 

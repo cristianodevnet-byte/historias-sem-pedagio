@@ -26,11 +26,7 @@ export const siteConfig = {
 
   channel: {
     name: 'Sem Pedágio',
-    /**
-     * PENDENTE: endereço do canal no YouTube.
-     * Enquanto for `null`, o site cita o canal apenas pelo nome, sem link.
-     * Exemplo de preenchimento: 'https://www.youtube.com/@seu-canal'
-     */
-    url: null as string | null,
+    /** Endereço do canal no YouTube. Com `null`, o site cita o canal só pelo nome, sem link. */
+    url: 'https://www.youtube.com/@SemPed%C3%A1gio-h5c' as string | null,
   },
 } as const
