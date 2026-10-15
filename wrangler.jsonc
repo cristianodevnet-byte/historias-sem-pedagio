@@ -1,0 +1,13 @@
+// Configuração de publicação na Cloudflare (Workers com arquivos estáticos).
+// O site é 100% estático: a Cloudflare só serve o conteúdo da pasta dist,
+// gerada por `npm run build`. Não há código rodando no servidor.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "historias-sem-pedagio",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // Qualquer endereço desconhecido abre a página inicial (a história do dia).
+    "not_found_handling": "single-page-application"
+  }
+}

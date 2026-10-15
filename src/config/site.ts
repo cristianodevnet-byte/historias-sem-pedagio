@@ -17,11 +17,11 @@ export const siteConfig = {
   rotationStart: '2026-10-14',
 
   /**
-   * Endereço público do site.
+   * Endereço público do site (Cloudflare Workers).
    * PROVISÓRIO: só passe `siteUrlConfirmed` para `true` depois que o projeto
-   * estiver publicado na Cloudflare e o endereço abrir de verdade.
+   * estiver publicado e o endereço abrir de verdade.
    */
-  siteUrl: 'https://historias-sem-pedagio.pages.dev',
+  siteUrl: 'https://historias-sem-pedagio.workers.dev',
   siteUrlConfirmed: false,
 
   channel: {

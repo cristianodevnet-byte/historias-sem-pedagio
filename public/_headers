@@ -1,4 +1,4 @@
-# Cabeçalhos HTTP do Cloudflare Pages.
+# Cabeçalhos HTTP aplicados pela Cloudflare aos arquivos do site.
 # Arquivos em /assets têm nome com hash e podem ficar em cache por um ano.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable

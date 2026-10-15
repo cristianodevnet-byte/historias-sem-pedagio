@@ -7,7 +7,7 @@ Os passageiros escaneiam um QR Code dentro do carro e caem direto na história d
 - As histórias se revezam em rodízio, uma por dia. Ao chegar na última, o ciclo recomeça.
 - A história muda sozinha à meia-noite de Brasília, mesmo com a página aberta.
 - Cada história tem um link permanente para compartilhar.
-- O site é estático: funciona de graça no Cloudflare Pages, sem servidor nem banco de dados.
+- O site é estático: funciona de graça na Cloudflare, sem servidor nem banco de dados.
 
 ---
 
@@ -220,7 +220,7 @@ O botão usa o compartilhamento nativo do celular e, quando ele não existe, cop
 Tudo fica em [`src/config/site.ts`](src/config/site.ts):
 
 ```ts
-siteUrl: 'https://historias-sem-pedagio.pages.dev',
+siteUrl: 'https://historias-sem-pedagio.SEU-SUBDOMINIO.workers.dev',
 siteUrlConfirmed: false,          // mude para true depois de publicar
 channel: {
   name: 'Sem Pedágio',
@@ -238,7 +238,7 @@ A identidade visual atual é tipográfica e provisória. Cores e fontes ficam em
 
 ---
 
-## Publicar no Cloudflare Pages
+## Publicar na Cloudflare
 
 ### 1. Enviar o projeto ao GitHub (primeira vez)
 
@@ -254,23 +254,23 @@ git push -u origin main
 
 > Se o repositório no GitHub já tiver algum arquivo (por exemplo, um README criado pelo site), o `push` será recusado. Nesse caso, rode antes `git pull origin main --allow-unrelated-histories`.
 
-### 2. Criar o projeto na Cloudflare
+### 2. Criar o projeto na Cloudflare (Workers)
 
-1. Entre em [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+O site é publicado como **Worker com arquivos estáticos**, o caminho atual da Cloudflare (o antigo Pages virou "legado"). A configuração fica no arquivo [`wrangler.jsonc`](wrangler.jsonc): nome do projeto e pasta `dist`.
+
+1. Entre em [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers e Pages** → **Criar aplicativo** → **Importar um repositório**.
 2. Escolha o repositório `historias-sem-pedagio`.
 3. Configure:
-   - **Project name:** `historias-sem-pedagio`
-   - **Production branch:** `main`
-   - **Framework preset:** `None` (as configurações abaixo já bastam)
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-4. Clique em **Save and Deploy**.
+   - **Nome do projeto:** `historias-sem-pedagio` (precisa ser igual ao `name` do `wrangler.jsonc`)
+   - **Comando de build:** `npm run build`
+   - **Comando de implantação:** `npx wrangler deploy`
+4. Clique em **Implantar**.
 
-O plano gratuito é suficiente: não há servidor, banco de dados nem cobrança.
+O plano gratuito é suficiente: arquivos estáticos não têm cobrança nem limite de acessos.
 
 ### 3. Depois da primeira publicação
 
-1. Abra o endereço que a Cloudflare mostrar (provavelmente `https://historias-sem-pedagio.pages.dev`) e confira se tudo funciona.
+1. Abra o endereço que a Cloudflare mostrar (algo como `https://historias-sem-pedagio.SEU-SUBDOMINIO.workers.dev`) e confira se tudo funciona.
 2. Em `src/config/site.ts`, confirme `siteUrl` e passe `siteUrlConfirmed` para `true`.
 3. No `index.html`, descomente as linhas de `canonical` e `og:url` com o endereço real.
 
@@ -293,11 +293,11 @@ A Cloudflare publica sozinha em um ou dois minutos.
 
 Só gere o QR Code **depois** que o endereço estiver publicado e testado.
 
-1. Use exatamente o endereço da página inicial, sem parâmetros, por exemplo `https://historias-sem-pedagio.pages.dev/`.
+1. Use exatamente o endereço da página inicial, sem parâmetros, como está em `siteUrl` no `src/config/site.ts`.
 2. Gere um **QR Code estático**. Evite geradores "dinâmicos": eles redirecionam por um serviço de terceiros e podem expirar ou passar a cobrar. Uma opção simples: abra o site no Chrome ou no Edge do computador e use **Compartilhar → Criar código QR**.
 3. Teste o código impresso com dois ou três celulares diferentes, em luz forte e fraca.
 
-Como o endereço nunca muda, o mesmo QR Code serve para sempre: a história é que muda a cada dia. Se um dia você usar um domínio próprio, o endereço `.pages.dev` continua funcionando, e o QR Code antigo não perde a validade.
+Como o endereço nunca muda, o mesmo QR Code serve para sempre: a história é que muda a cada dia. Se um dia você usar um domínio próprio, o endereço `.workers.dev` continua funcionando, e o QR Code antigo não perde a validade.
 
 ---
 
